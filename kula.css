@@ -172,4 +172,39 @@ button:hover {
   section h2 {
     font-size: 1.6em;
   }
+  .clinic-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
 }
+
+.clinic-card {
+  background-color: #222; /* dark mode */
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.clinic-card img {
+  width: 100%;
+  display: block;
+}
+
+.clinic-card h3 {
+  color: #ff4d4d;
+  margin: 10px 0;
+}
+
+.clinic-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #007bff, 0 0 25px #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+}
+
