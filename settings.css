@@ -1,0 +1,142 @@
+/* === ROOT VARIABLES === */
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --accent-red: #ff4d4d;
+  --accent-blue: #4da6ff;
+  --font-main: '3ds', sans-serif;
+}
+
+/* === GLOBAL STYLING === */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent-blue);
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* === SETTINGS CONTAINER === */
+.settings-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #2a2a2a;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  color: var(--accent-blue);
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(77,166,255,0.5);
+}
+
+select:hover {
+  box-shadow: 0 0 15px var(--accent-blue);
+  transform: scale(1.02);
+}
+
+/* === SAVE BUTTON === */
+#saveBtn {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background-color: var(--accent-blue);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--accent-blue);
+  transition: 0.3s;
+}
+
+#saveBtn:hover {
+  background-color: var(--accent-red);
+  box-shadow: 0 0 20px var(--accent-red);
+  transform: scale(1.05);
+}
+
+/* === PREVIEW TEXT === */
+#preview {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-weight: bold;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  color: var(--accent-blue);
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #fff;
+  background-color: #1e1e1e;
+  border-top: 1px solid #444;
+  border-radius: 0 0 15px 15px;
+}
+
+footer .designer {
+  color: var(--accent-red);
+  font-weight: bold;
+}
+
+footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+  }
+
+  .settings-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+}
