@@ -141,6 +141,19 @@ footer {
 footer p {
   margin: 0;
 } 
+.settings-link {
+  color: #4da6ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.settings-link:hover {
+  color: #ff4d4d;
+  text-shadow: 0 0 10px #ff4d4d;
+}
+
+}
+
 
 
