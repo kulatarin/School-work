@@ -149,4 +149,3 @@ if (window.location.pathname.includes("settings.html")) {
 
     loadSettings();
 }
-
