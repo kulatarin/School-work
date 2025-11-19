@@ -9,6 +9,37 @@
 </head>
 <body>
   <h1>⚙️ Website Settings</h1>
+<!-- FONT PREVIEW -->
+<h3>Font Preview</h3>
+<div id="fontPreview" style="
+    padding:15px;
+    border:1px solid #555;
+    border-radius:10px;
+    margin-bottom:20px;
+">
+    This is a preview of your selected font.
+</div>
+
+<!-- EXTRA THEMES -->
+<label for="theme">Theme:</label>
+<select id="theme">
+    <option value="dark">Dark</option>
+    <option value="light">Light</option>
+    <option value="cyberpunk">Cyberpunk</option>
+    <option value="retro">Retro Blue-Red</option>
+    <option value="neon">Neon Glow</option>
+</select>
+
+<!-- SOUND SETTINGS -->
+<h3>Sound Settings</h3>
+<label>Sound:</label>
+<select id="soundToggle">
+    <option value="on">On</option>
+    <option value="off">Off</option>
+</select>
+
+<label>Volume:</label>
+<input type="range" id="soundVolume" min="0" max="100" value="70">
 
   <div class="settings-container"><label for="font">Font:</label>
 <select id="font">
