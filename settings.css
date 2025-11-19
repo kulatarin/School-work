@@ -139,4 +139,26 @@ footer a:hover {
   h1 {
     font-size: 1.6em;
   }
+  nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 }
