@@ -138,27 +138,79 @@ footer a:hover {
 
   h1 {
     font-size: 1.6em;
-  }
-  nav {
-  margin-top: 15px;
+/* =========================
+   NAVIGATION PANE STYLES
+========================= */
+#navPane {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color var(--transition), text-shadow var(--transition);
+.nav-logo {
+    font-family: '3ds', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent-blue);
 }
 
-nav a:hover {
-  color: var(--accent);
-  text-shadow: 0 0 8px var(--accent);
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: '3ds', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
 }
+
+.nav-links li a:hover {
+    color: var(--accent-red);
+    text-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* MOBILE MENU TOGGLE */
+#nav-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--accent-blue);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-left: 1px solid #444;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+}
+
 }
