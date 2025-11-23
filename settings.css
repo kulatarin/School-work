@@ -1,13 +1,8 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
     background: #0d0d0d;
-    color: white;
+    color: #ffffff;
     font-family: "3ds", sans-serif;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -16,26 +11,24 @@ body {
     width: 260px;
     height: 100vh;
     background: linear-gradient(180deg, #161616, #0a0a0a);
+    border-right: 1px solid rgba(57,255,20,0.3);
     box-shadow: 3px 0 20px rgba(0, 255, 60, 0.15);
-    padding: 30px 0;
     position: fixed;
     top: 0;
     left: 0;
+    padding-top: 30px;
     z-index: 900;
-    border-right: 1px solid rgba(57, 255, 20, 0.3);
     transition: all 0.35s ease;
-    backdrop-filter: blur(3px);
 }
 
 .nav-pane a {
     display: block;
     padding: 14px 25px;
     font-size: 17px;
-    color: #cfcfcf;
     text-decoration: none;
+    color: #cfcfcf;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
     transition: 0.25s ease;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    position: relative;
 }
 
 .nav-pane a:hover {
@@ -44,24 +37,6 @@ body {
     padding-left: 40px;
     text-shadow: 0 0 10px #39ff14;
     box-shadow: inset 0 0 8px rgba(57,255,20,0.4);
-}
-
-.nav-pane a::before {
-    content: "";
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(57,255,20,0);
-    transition: 0.3s ease;
-}
-
-.nav-pane a:hover::before {
-    background: #39ff14;
-    box-shadow: 0 0 8px #39ff14;
 }
 
 .nav-pane .active {
@@ -76,38 +51,21 @@ body {
 .page-content {
     margin-left: 260px;
     padding: 35px;
-    width: calc(100% - 260px);
     min-height: 100vh;
+    width: calc(100% - 260px);
     transition: margin-left 0.35s ease;
-    animation: fadeInPage 0.4s ease forwards;
 }
 
 @media (max-width: 700px) {
-    .nav-pane {
-        width: 210px;
-    }
-    .page-content {
-        margin-left: 210px;
-        width: calc(100% - 210px);
-    }
+    .nav-pane { width: 210px; }
+    .page-content { margin-left: 210px; width: calc(100% - 210px); }
 }
 
 @media (max-width: 550px) {
-    .nav-pane {
-        left: -260px;
-    }
-    .page-content {
-        margin-left: 0;
-        width: 100%;
-    }
-    .nav-toggle-btn {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        background: #39ff14;
-        color: black;
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-        box-
+    .nav-pane { left: -260px; }
+    .page-content { margin-left: 0; width: 100%; }
+}
+
+.nav-open .nav-pane {
+    left: 0;
+}
